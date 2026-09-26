@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Glowing Effect Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -80;
+      }
+    }
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+    }
+    @keyframes float-reverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-1deg); }
+    }
+    @keyframes pulse-node {
+      0%, 100% { r: 6; opacity: 0.6; }
+      50% { r: 9; opacity: 1; }
+    }
+    .grid-line { stroke: #334155; stroke-width: 0.5; stroke-opacity: 0.4; }
+    .flow-path { stroke: url(#accent-cyan); stroke-width: 2; stroke-dasharray: 8 8; animation: dash 3s linear infinite; }
+    .flow-path-purple { stroke: url(#accent-purple); stroke-width: 2; stroke-dasharray: 8 8; animation: dash 4s linear infinite reverse; }
+    .floating-card-1 { animation: float-slow 6s ease-in-out infinite; }
+    .floating-card-2 { animation: float-reverse 7s ease-in-out infinite; }
+    .node-pulse { animation: pulse-node 3s ease-in-out infinite; }
+    .title-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 48px; fill: url(#text-grad); }
+    .subtitle-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; }
+    .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 13px; fill: #e2e8f0; }
+  </style>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="400" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Background Architecture Grid -->
+  <g class="grid-line">
+    <line x1="100" y1="0" x2="100" y2="400" />
+    <line x1="300" y1="0" x2="300" y2="400" />
+    <line x1="500" y1="0" x2="500" y2="400" />
+    <line x1="700" y1="0" x2="700" y2="400" />
+    <line x1="900" y1="0" x2="900" y2="400" />
+    <line x1="1100" y1="0" x2="1100" y2="400" />
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="160" x2="1200" y2="160" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="320" x2="1200" y2="320" />
+  </g>
+
+  <!-- Animated Architecture Topology Flows (Background Layer) -->
+  <g opacity="0.6">
+    <!-- Connecting Curved Paths -->
+    <path d="M 150 320 Q 350 200 600 280 T 1050 120" fill="none" class="flow-path" />
+    <path d="M 100 120 Q 400 350 750 150 T 1120 300" fill="none" class="flow-path-purple" />
+
+    <!-- Animated Topology Nodes -->
+    <circle cx="150" cy="320" fill="#38bdf8" class="node-pulse" />
+    <circle cx="600" cy="280" fill="#818cf8" class="node-pulse" style="animation-delay: 1s;" />
+    <circle cx="1050" cy="120" fill="#c084fc" class="node-pulse" style="animation-delay: 2s;" />
+    <circle cx="750" cy="150" fill="#ec4899" class="node-pulse" style="animation-delay: 1.5s;" />
+  </g>
+
+  <!-- Background Decorative Pills/Cards (Behind Text) -->
+  <g class="floating-card-1" opacity="0.35">
+    <rect x="820" y="50" width="280" height="90" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+    <text x="840" y="85" class="badge-text" fill="#38bdf8">🏛️ TOGAF 10 &amp; ArchiMate 3.2</text>
+    <text x="840" y="115" font-family="sans-serif" font-size="12" fill="#64748b">Capability Mapping &amp; Ontologies</text>
+  </g>
+
+  <g class="floating-card-2" opacity="0.35">
+    <rect x="850" y="240" width="290" height="100" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+    <text x="870" y="275" class="badge-text" fill="#a855f7">⚡ Architecture as Code</text>
+    <text x="870" y="305" font-family="sans-serif" font-size="12" fill="#64748b">C4 Model, Structurizr &amp; Diagrams</text>
+  </g>
+
+  <!-- FOREGROUND LAYER: Main Banner Title & Subtitle (Always Crisp & Unobstructed) -->
+  <g transform="translate(80, 150)">
+    <!-- Pill Category Label -->
+    <rect x="0" y="0" width="260" height="32" rx="16" fill="url(#accent-purple)" opacity="0.25" />
+    <rect x="0" y="0" width="260" height="32" rx="16" fill="none" stroke="#a855f7" stroke-width="1" />
+    <text x="16" y="21" font-family="system-ui, sans-serif" font-weight="700" font-size="12" fill="#e0e7ff" letter-spacing="1">CURATED EA ECOSYSTEM 2026</text>
+
+    <!-- Main Title -->
+    <text x="0" y="80" class="title-text" filter="url(#glow)">Awesome Enterprise Architecture</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="122" class="subtitle-text">The Ultimate Guide to SaaS Platforms, Open-Source Suites &amp; Architecture-as-Code</text>
+
+    <!-- Tags Row -->
+    <g transform="translate(0, 155)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="130" height="30" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+      <text x="14" y="19" class="badge-text" fill="#38bdf8">📊 Portfolio APM</text>
+
+      <!-- Tag 2 -->
+      <rect x="142" y="0" width="150" height="30" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1" />
+      <text x="156" y="19" class="badge-text" fill="#818cf8">🗺️ Capability Maps</text>
+
+      <!-- Tag 3 -->
+      <rect x="304" y="0" width="160" height="30" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1" />
+      <text x="318" y="19" class="badge-text" fill="#c084fc">🔓 Open-Source Suites</text>
+
+      <!-- Tag 4 -->
+      <rect x="476" y="0" width="140" height="30" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1" />
+      <text x="490" y="19" class="badge-text" fill="#f43f5e">💻 Strategy &amp; Governance</text>
+    </g>
+  </g>
+</svg>
