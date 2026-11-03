@@ -70,6 +70,9 @@ The table below lists top commercial SaaS enterprise architecture suites, sorted
 | **[Avolution ABACUS](https://www.avolutionsoftware.com/)** | ~$600 / month *($7,200 / year cloud starter)* | 30-Day free trial account *(No free forever plan)* | **~$60M Valuation** *(~$20M Revenue)* | Graph analytics, roadmapping, multi-framework support (TOGAF, ArchiMate, FEAF, DODAF). |
 | **[Sparx Enterprise Architect](https://sparxsystems.com/)** | $249 / user *(One-time Desktop license; $349 Corporate)* | 30-Day fully functional trial *(Reverts to read-only viewer mode)* | **~$50M Valuation** *(~$25M Revenue)* | Desktop UML/ArchiMate modeling suite, SysML, BPMN, robust repository features. |
 | **[ValueBlue (BlueDolphin)](https://valueblue.com/)** | ~$500 / month *($6,000 / year starter env)* | 14-Day free trial on BlueDolphin platform *(No free forever plan)* | **~$40M Valuation** *(~$12M Revenue)* | Collaborative agile EA, business capability maps, application & technology visualization. |
+| **[Entelim](https://entelim.org/)** | $49 / month *(Startup hosted, 10 people)* | Free Community hosted plan *(3 people)*; free self-hosted under AGPL-3.0 at any size | **Archiet Ltd** *(Privately held)* | Open-source company brain on ArchiMate 3.2: application portfolio, risk blast radius, roadmaps, Architecture Review Board, compliance frameworks. |
+| **[Iyene](https://iyene.archiet.ai/)** | Contact vendor | Free Community plan *(1 user, up to 10 applications)* | **Archiet Ltd** *(Privately held)* | Application portfolio and capability intelligence, AI-assisted TIME rationalization, ArchiMate capability mapping. |
+| **[Etione](https://etione.archiet.ai/)** | See pricing page | Free plan | **Archiet Ltd** *(Privately held)* | AI prompt-to-diagram for ArchiMate 3.2 and C4, plus UML/BPMN, with PDF/PNG/SVG/XML/JSON export. |
 
 ---
 
